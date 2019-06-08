@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+            margin-bottom: 300px;
+        }
+
+        .box img {
+            filter: blur(5px);
+            transition: all 1s ease-in;
+            transform: translateY(50%) scale(.7);
+
+        }
+
+        .box.box.is-visible {
+            background-color: transparent;
+        }
+
+        .box.is-visible img {
+            filter: blur(0);
+            transform: translateY(0) scale(1);
+
+        }
+    </style>
+    <title>LazyLoad</title>
+</head>
+
+<body>
+
+    <div class="box">
+        <img data-id="img/1.jpg" src="#" alt="">
+    </div>
+    <div class="box">
+        <img data-id="img/2.jpg" src="#" alt="">
+    </div>
+    <div class="box">
+        <img data-id="img/3.jpg" src="#" alt="">
+    </div>
+    <div class="box">
+        <img data-id="img/4.jpg" src="#" alt="">
+    </div>
+    <div class="box">
+        <img data-id="img/5.jpg" src="#" alt="">
+    </div>
+    <div class="box">
+        <img data-id="img/6.jpg" src="#" alt="">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js">
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
